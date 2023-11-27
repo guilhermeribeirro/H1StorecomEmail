@@ -7,14 +7,29 @@ using System.Threading.Tasks;
 
 namespace H1Store.Catalogo.Domain.Interfaces
 {
-	public interface IProdutoRepository
-	{
-		IEnumerable<Produto> ObterTodos();
-		Task<Produto> ObterPorId(Guid id);
-		Task<IEnumerable<Produto>> ObterPorCategoria(int codigo);
+    public interface IProdutoRepository
+    {
+        IEnumerable<Produto> ObterTodos();
+        Task<Produto> ObterPorId(Guid id);
+        Task<IEnumerable<Produto>> ObterPorCategoria(int codigo);
 
-		Task Adicionar(Produto produto);
-		Task Desativar(Produto produto);
-		void Atualizar(Produto produto);
-	}
+        Task Adicionar(Produto produto);
+        Task Desativar(Produto produto);
+        Task Atualizar(Produto produto);
+
+        Task Reativar(Guid id);
+
+        Task AlterarPreco(Guid id, decimal novoPreco);
+
+        Task AtualizarEstoque(Guid id, int quantidade);
+
+        IEnumerable<Produto> ObterPorNome(string palavraBuscada);
+
+
+
+
+
+
+
+    }
 }

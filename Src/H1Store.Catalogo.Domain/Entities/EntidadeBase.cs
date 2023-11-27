@@ -6,14 +6,18 @@ using System.Threading.Tasks;
 
 namespace H1Store.Catalogo.Domain.Entities
 {
-	public abstract class EntidadeBase
-	{
-		public Guid CodigoId { get; set; }
+    public abstract class EntidadeBase
+    {
 
-		protected EntidadeBase()
-		{
-			CodigoId = Guid.NewGuid();
-		}
+        public Guid CodigoId { get; set; }
 
-	}
+        protected EntidadeBase()
+
+        {
+            CodigoId = Guid.NewGuid();
+
+
+        }
+
+    }
 }
