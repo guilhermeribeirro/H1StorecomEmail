@@ -6,8 +6,12 @@ using System.Threading.Tasks;
 
 namespace H1Store.Catalogo.Infra.Autenticacao.Models
 {
-    public class TokenRequest
+    public class SenhaAutenticar
     {
-        public string usuario { get; set; }
+
+        public string Nome { get; set; }
+        public string Senha { get; set; }
+
+
     }
 }

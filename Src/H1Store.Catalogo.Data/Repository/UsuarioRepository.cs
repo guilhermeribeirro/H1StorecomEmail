@@ -3,6 +3,7 @@ using H1Store.Catalogo.Data.Providers.MongoDb.Collections;
 using H1Store.Catalogo.Data.Providers.MongoDb.Interfaces;
 using H1Store.Catalogo.Domain.Entities;
 using H1Store.Catalogo.Domain.Interfaces;
+using H1Store.Catalogo.Infra.Autenticacao;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,12 +14,13 @@ namespace H1Store.Catalogo.Data.Repository
 {
 	public class UsuarioRepository : IUsuarioRepository
 	{
-
-		private readonly IMongoRepository<UsuarioCollection> _usuarioRepository;
+        
+        private readonly IMongoRepository<UsuarioCollection> _usuarioRepository;
 		private readonly IMapper _mapper;
 		public UsuarioRepository(
 			IMongoRepository<UsuarioCollection> usuarioRepository,
 			IMapper mapper
+
 		)
 		{
 			_usuarioRepository = usuarioRepository;
@@ -39,5 +41,10 @@ namespace H1Store.Catalogo.Data.Repository
 			var novoUsuarioCollection = _mapper.Map<UsuarioCollection>(novoUsuario);
 			await _usuarioRepository.InsertOneAsync(novoUsuarioCollection);
 		}
-	}
+
+
+
+
+       
+    }
 }

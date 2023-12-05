@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace H1Store.Catalogo.Infra.Autenticacao
 {
-	public interface ITokenService
-	{
-		Task<string> GerarTokenJWT(TokenRequest request);
-		Task<JwtSecurityToken> DecodificarTokenJWT(string protectedText);
-	}
+    public interface ITokenService
+    {
+        Task<string> GerarTokenJWT(TokenRequest request);
+        Task<JwtSecurityToken> DecodificarTokenJWT(string protectedText);
+    }
 }

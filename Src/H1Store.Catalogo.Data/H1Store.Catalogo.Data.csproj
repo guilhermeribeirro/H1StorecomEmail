@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\H1Store.Catalogo.Domain\H1Store.Catalogo.Domain.csproj" />
+    <ProjectReference Include="..\H1Store.Catalogo.Infra\H1Store.Catalogo.Infra.csproj" />
   </ItemGroup>
 
   <ItemGroup>
